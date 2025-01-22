@@ -31,7 +31,7 @@ git clone https://github.com/FOSSCLUB-LBSITW/Memory-block-game.git
 ## Navigate to the project directory:
 
 ```
-cd memory-block-game
+cd Memory-block-game-main/code
 
 ```
 -> Open index.html in your browser to play the game.
