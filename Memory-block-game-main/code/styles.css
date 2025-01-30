@@ -42,3 +42,24 @@ body {
 .block.flipped img {
     display: block;
 }
+
+#reset {
+    background-color: #47426d;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+#reset:hover {
+    background-color: #5a598a;
+    transform: scale(1.05);
+}
+
+#reset:active {
+    background-color: #3e3c5f;
+}
