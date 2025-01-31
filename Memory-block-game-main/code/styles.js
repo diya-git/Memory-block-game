@@ -37,9 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
         block.dataset.image = shuffledImages[index];
     });
 
+    let matchedPairs = 0;
     let hasFlippedBlock = false;
     let lockBoard = false;
     let firstBlock, secondBlock;
+    
 
     blocks.forEach(block => block.addEventListener("click", flipBlock));
 
@@ -68,6 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function disableBlocks() {
         firstBlock.removeEventListener("click", flipBlock);
         secondBlock.removeEventListener("click", flipBlock);
+        matchedPairs++;
+        
+        if(matchedPairs === blocks.length / 2){
+            showCongratulations();
+        }
+
         resetBoard();
     }
 
@@ -86,4 +94,38 @@ document.addEventListener("DOMContentLoaded", () => {
         [hasFlippedBlock, lockBoard] = [false, false];
         [firstBlock, secondBlock] = [null, null];
     }
+
+
+function showCongratulations() {
+    const popup = document.getElementById("congratulation-popup");
+    popup.style.display = "block";
+}
+
+function resetGame() {
+    // Reset the matched pairs counter
+    matchedPairs = 0;
+    
+    // Hide the popup
+    const popup = document.getElementById("congratulation-popup");
+    popup.style.display = "none";
+    
+    // Reset all blocks
+    blocks.forEach(block => {
+        block.classList.remove("flipped");
+        block.querySelector("img").style.display = "none";
+        block.addEventListener("click", flipBlock);
+    });
+    
+    // Shuffle the images and reassign them to blocks
+    const shuffledImages = shuffle(images);
+    blocks.forEach((block, index) => {
+        block.dataset.image = shuffledImages[index];
+        block.querySelector("img").src = shuffledImages[index];
+    });
+}
+
+const playAgainButton = document.getElementById("play-again");
+playAgainButton.addEventListener("click", resetGame);
+
+
 });
