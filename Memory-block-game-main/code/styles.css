@@ -43,6 +43,7 @@ body {
     display: block;
 }
 
+ congrats
 /* Pop-up styles */
 #congratulation-popup {
     position: fixed;
@@ -62,4 +63,25 @@ button {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+
+#reset {
+    background-color: #47426d;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+#reset:hover {
+    background-color: #5a598a;
+    transform: scale(1.05);
+}
+
+#reset:active {
+    background-color: #3e3c5f;
+
 }
