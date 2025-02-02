@@ -1,87 +1,98 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 .game {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
 }
 
 .block {
-    width: 100px;
-    height: 100px;
-    background-color: #47426d;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #47426d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
 }
 
 .block:hover {
-    transform: scale(1.1); 
-    background-color: #5a598a;
+  transform: scale(1.1);
+  background-color: #5a598a;
 }
 
 .block img {
-    display: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .block.flipped img {
-    display: block;
+  display: block;
 }
 
- congrats
+congrats
 /* Pop-up styles */
 #congratulation-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: none;
-    text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  text-align: center;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
 #reset {
-    background-color: #47426d;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 15px;
+  background-color: #47426d;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 15px;
+}
+
+#play-again {
+  background-color: #47426d;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 15px;
 }
 
 #reset:hover {
-    background-color: #5a598a;
-    transform: scale(1.05);
+  background-color: #5a598a;
+  transform: scale(1.05);
 }
 
 #reset:active {
-    background-color: #3e3c5f;
-
+  background-color: #3e3c5f;
 }
